@@ -1,0 +1,63 @@
+Desafio: Criar uma Lista de Tarefas (To-Do List) com JavaScript
+
+O objetivo é criar uma lista de tarefas onde você possa adicionar e excluir tarefas, utilizando HTML, CSS e JavaScript. Você vai praticar manipulação de DOM (para exibir as tarefas) e armazenar as tarefas em LocalStorage, que é uma forma simples de banco de dados no navegador.
+
+Passo 1: Estrutura HTML
+Desafio: Crie a estrutura básica de uma página com um formulário para adicionar tarefas e uma lista para exibir as tarefas.
+
+Você precisará de um campo de entrada de texto para adicionar novas tarefas.
+Um botão para submeter a tarefa.
+Uma lista (<ul>) onde as tarefas adicionadas serão mostradas.
+Dica: O formulário pode ter um campo <input> de texto e um <button> para adicionar a tarefa.
+
+Passo 2: Estilização com CSS
+Desafio: Faça a estilização básica da sua página.
+
+A página deve ter uma aparência simples, mas agradável.
+Centralize o formulário e a lista na tela.
+Use cores suaves e fontes legíveis.
+Dê uma borda e espaçamento adequado entre os itens da lista.
+Faça com que o botão de "Excluir" seja visível e tenha um estilo diferente, como uma cor vermelha.
+Passo 3: Manipulação de Tarefas com JavaScript
+Desafio: Agora, vamos implementar a lógica para adicionar e excluir tarefas com JavaScript.
+
+Adicionar Tarefa: Quando o botão de "Adicionar Tarefa" for clicado, a tarefa deve ser inserida na lista.
+Excluir Tarefa: Cada tarefa deve ter um botão de "Excluir" ao lado dela. Quando o botão for clicado, a tarefa deve ser removida da lista.
+Dica: Para adicionar a tarefa na lista, você pode usar o método createElement para criar um novo <li>, com o texto da tarefa e o botão de excluir.
+
+Passo 4: Usar LocalStorage para Persistência
+Desafio: Faça com que as tarefas sejam salvas mesmo depois de o navegador ser fechado.
+
+Use o LocalStorage para armazenar as tarefas no navegador.
+Quando a página for recarregada, você deve buscar as tarefas armazenadas no LocalStorage e exibi-las automaticamente na lista.
+Dica: Para salvar as tarefas no LocalStorage, use localStorage.setItem('tarefas', JSON.stringify(tarefas));. Para buscar as tarefas, use localStorage.getItem('tarefas') e, depois de pegar os dados, converta com JSON.parse().
+
+Passo 5: Organize o Código e Teste
+Desafio: Organize seu código.
+
+Separe o código em funções (uma para adicionar tarefa, outra para excluir, outra para carregar as tarefas do LocalStorage, etc).
+Certifique-se de que tudo funcione de forma simples e clara.
+Dica: Uma boa prática é usar eventos no JavaScript para manipular os elementos. Por exemplo, o evento de submit para o formulário, e o evento click para os botões de excluir.
+
+--------------------------------------------------------------------------------------------
+Como resolver passo a passo:
+
+Agora, aqui está como você pode resolver cada etapa:
+
+HTML:
+
+Estruture sua página com um formulário simples.
+Adicione um campo de entrada <input> e um botão de envio.
+Crie uma lista vazia com <ul> onde as tarefas serão mostradas.
+CSS:
+
+Comece com o básico: centralize a página e a lista.
+Faça a lista ter espaçamento entre os itens e adicione um estilo para o botão de excluir (uma cor vermelha, por exemplo).
+JavaScript:
+
+No JavaScript, comece criando uma função para adicionar tarefas. Use document.createElement('li') para criar um novo item na lista e taskList.appendChild(item) para adicioná-lo.
+Depois, adicione um evento de click para o botão de excluir, que remove a tarefa da lista e também do LocalStorage.
+LocalStorage:
+
+No início, quando a página carregar, você deve buscar as tarefas armazenadas com localStorage.getItem() e exibi-las.
+Quando o usuário adicionar uma nova tarefa, armazene a lista de tarefas atualizada no LocalStorage com localStorage.setItem().
